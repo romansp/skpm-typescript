@@ -1,0 +1,11 @@
+{
+  "exclude": [
+    "plugin.sketchplugin"
+  ],
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "strict": true ,
+    "moduleResolution": "node"
+  }
+}

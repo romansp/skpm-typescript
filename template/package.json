@@ -1,0 +1,26 @@
+{
+  "name": "foobar",
+  "version": "0.1.0",
+  "engines": {
+    "sketch": ">=3.0"
+  },
+  "skpm": {
+    "name": "foobar",
+    "manifest": "src/manifest.json",
+    "main": "plugin.sketchplugin"
+  },
+  "scripts": {
+    "build": "skpm-build",
+    "watch": "skpm-build --watch",
+    "start": "skpm-build --watch --run",
+    "tslint": "tslint",
+    "lint": "tslint -p tsconfig.json",
+    "postinstall": "npm run build && skpm-link"
+  },
+  "devDependencies": {
+    "@skpm/builder": "^0.1.4",
+    "ts-loader": "^3.0.5",
+    "tslint": "^5.8.0",
+    "typescript": "^2.5.3"
+  }
+}
