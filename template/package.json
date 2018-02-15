@@ -18,7 +18,7 @@
     "postinstall": "npm run build && skpm-link"
   },
   "devDependencies": {
-    "@skpm/builder": "^0.1.4",
+    "@skpm/builder": "<1",
     "ts-loader": "^3.0.5",
     "tslint": "^5.8.0",
     "typescript": "^2.5.3"
