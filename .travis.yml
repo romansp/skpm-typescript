@@ -1,0 +1,14 @@
+os: osx
+
+language: node_js
+
+node_js:
+  - "node"
+
+before_install:
+  - mkdir -p "~/Library/Application Support/com.bohemiancoding.sketch3"
+  - mkdir -p "~/Library/Application Support/com.bohemiancoding.sketch3/Plugins"
+
+script:
+  - npm install -g skpm
+  - skpm create sketch-plugin-typescript --template=romansp/skpm-typescript
