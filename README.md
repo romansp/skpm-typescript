@@ -1,5 +1,7 @@
 # TypeScript skpm template
 
+[![Build Status](https://travis-ci.org/romansp/skpm-typescript.svg?branch=master)](https://travis-ci.org/romansp/skpm-typescript)
+
 ## Documentation
 
 - This is a template for [skpm](https://github.com/skpm/skpm) with [TypeScript](https://github.com/Microsoft/TypeScript) and [TSLint](https://github.com/palantir/tslint) support.
