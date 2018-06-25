@@ -11,6 +11,7 @@ before_install:
   - npm set progress=false
   - mkdir -p "~/Library/Application Support/com.bohemiancoding.sketch3"
   - mkdir -p "~/Library/Application Support/com.bohemiancoding.sketch3/Plugins"
+  - /usr/bin/defaults write ~/Library/Preferences/com.bohemiancoding.sketch3.plist AlwaysReloadScript -bool YES
 
 script:
   - npm install -g skpm
