@@ -21,4 +21,5 @@ script:
   - npm install -g skpm
   - skpm create sketch-plugin-typescript --template=romansp/skpm-typescript
   - cd sketch-plugin-typescript
+  - npm install
   - npm run build
