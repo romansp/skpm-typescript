@@ -1,12 +1,16 @@
 sudo: false
 language: node_js
 node_js:
-  - "8"
-  - "9"
+  - 8
+  - 9
+  - node
+env:
+  - NODE_ENV=development
+  - NODE_ENV=production
   
 os:
   - osx
-
+  
 before_install:
   - npm set progress=false
   - mkdir -p "~/Library/Application Support/com.bohemiancoding.sketch3"
@@ -16,3 +20,5 @@ before_install:
 script:
   - npm install -g skpm
   - skpm create sketch-plugin-typescript --template=romansp/skpm-typescript
+  - cd sketch-plugin-typescript
+  - npm run build
