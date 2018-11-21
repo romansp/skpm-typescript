@@ -2,6 +2,8 @@ const webpack = require("webpack");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = function (config, isPluginCommand) {
+  const isProduction = process.env.NODE_ENV == "production";
+  
   config.module.rules.push({
     test: /\.tsx?$/,
     exclude: /node_modules/,
