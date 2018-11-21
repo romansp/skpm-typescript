@@ -1,11 +1,14 @@
 {
-  "exclude": [
-    "plugin.sketchplugin"
+  "include": [
+    "src"
   ],
   "compilerOptions": {
     "target": "es5",
     "module": "esnext",
+    "downlevelIteration": true,
     "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "moduleResolution": "node"
   }
 }
