@@ -1,5 +1,4 @@
 const webpack = require("webpack");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = function (config, isPluginCommand) {
   const isProduction = process.env.NODE_ENV == "production";
@@ -24,15 +23,14 @@ module.exports = function (config, isPluginCommand) {
     config.plugins.push(
       new webpack.LoaderOptionsPlugin({
         minimize: true
-      }),
-      new UglifyJsPlugin({
-        uglifyOptions: {
-          output: {
-            comments: false
-          }
-        },
-        test: /\.j|ts($|\?)/i
       })
     );
+    config.optimization = {
+      minimizer: [
+        new TerserPlugin({
+          test: /\.j|ts($|\?)/i
+        })
+      ]
+    };
   }
 }
