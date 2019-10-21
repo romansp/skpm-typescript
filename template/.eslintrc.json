@@ -1,0 +1,16 @@
+{
+    "extends": [
+        "plugin:@typescript-eslint/eslint-recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "project": "./tsconfig.json"
+    },
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "eqeqeq": 0,
+        "interface-name-prefix": 0
+    }
+}

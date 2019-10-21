@@ -4,7 +4,7 @@
 
 ## Documentation
 
-- This is a template for [skpm](https://github.com/skpm/skpm) with [TypeScript](https://github.com/Microsoft/TypeScript) and [TSLint](https://github.com/palantir/tslint) support.
+- This is a template for [skpm](https://github.com/skpm/skpm) with [TypeScript](https://github.com/Microsoft/TypeScript) and [ESLint](https://github.com/eslint/eslint) support.
 - [For skpm](https://github.com/skpm/skpm): General information about how to work with skpm, not specific to this template
 - [For Sketch plugin](http://developer.sketchapp.com): General information about sketch plugin developement
 
