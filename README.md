@@ -1,6 +1,6 @@
 # TypeScript skpm template
 
-[![Build Status](https://travis-ci.org/romansp/skpm-typescript.svg?branch=master)](https://travis-ci.org/romansp/skpm-typescript)
+[![Build Status](https://travis-ci.com/romansp/skpm-typescript.svg?branch=master)](https://travis-ci.com/romansp/skpm-typescript)
 
 ## Documentation
 
