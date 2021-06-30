@@ -23,9 +23,9 @@ jobs:
           node-version: '14'
       
       - name: Build
+        working_directory: ./template
         run: |
-          cd template
-          yarn install
-          yarn lint
-          yarn build
+          npm run install
+          npm run lint
+          npm run build
 
