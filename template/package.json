@@ -16,7 +16,8 @@
     "build": "skpm-build",
     "watch": "skpm-build --watch",
     "start": "skpm-build --watch --run",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "postinstall": "npm run build && skpm-link"
   },
   "devDependencies": {
     "@skpm/builder": "<1",
