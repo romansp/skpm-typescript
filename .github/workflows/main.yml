@@ -29,9 +29,10 @@ jobs:
 
       - run: npm install -g skpm
       - run: skpm create sketch-plugin-typescript --template=romansp/skpm-typescript
-      - run: cd sketch-plugin-typescript
-      - run: npm install
-      - run: export NODE_ENV=production
-      - run: npm run lint
-      - run: npm run build
+      - run: |
+          cd sketch-plugin-typescript
+          npm install
+          export NODE_ENV=production
+          npm run lint
+          npm run build
 
