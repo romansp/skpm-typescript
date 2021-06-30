@@ -23,8 +23,8 @@ jobs:
           node-version: '14'
       
       - name: Build
-        working-directory: ./template
         run: |
+          cd template
           yarn install
           yarn lint
 
