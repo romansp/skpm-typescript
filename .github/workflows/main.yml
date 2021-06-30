@@ -27,4 +27,5 @@ jobs:
           cd template
           yarn install
           yarn lint
+          yarn build
 
