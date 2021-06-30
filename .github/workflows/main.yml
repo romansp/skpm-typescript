@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+    branches:
+      - master
+  schedule:
+    - cron: "0 4 *"
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+    
+    steps:
+      - uses: actions/setup-node@v2
+        with:
+          # choose node.js version to use
+          node-version: '14'
+
+      - run: npm set progress=false
+      - run: mkdir -p "~/Library/Application Support/com.bohemiancoding.sketch3"
+      - run: mkdir -p "~/Library/Application Support/com.bohemiancoding.sketch3/Plugins"
+      - run: /usr/bin/defaults write ~/Library/Preferences/com.bohemiancoding.sketch3.plist AlwaysReloadScript -bool YES
+
+      - run: npm install -g skpm
+      - run: skpm create sketch-plugin-typescript --template=romansp/skpm-typescript
+      - run: cd sketch-plugin-typescript
+      - run: npm install
+      - run: export NODE_ENV=production
+      - run: npm run lint
+      - run: npm run build
+
