@@ -7,32 +7,25 @@ on:
   pull_request:
     branches:
       - master
-  schedule:
-  - cron: "0 2 * * *"
 
   workflow_dispatch:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     
     steps:
+      - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
           # choose node.js version to use
           node-version: '14'
-
-      - run: npm set progress=false
-      - run: mkdir -p "~/Library/Application Support/com.bohemiancoding.sketch3"
-      - run: mkdir -p "~/Library/Application Support/com.bohemiancoding.sketch3/Plugins"
-      - run: /usr/bin/defaults write ~/Library/Preferences/com.bohemiancoding.sketch3.plist AlwaysReloadScript -bool YES
-
-      - run: npm install -g skpm
-      - run: skpm create sketch-plugin-typescript --template=romansp/skpm-typescript
-      - run: |
-          cd sketch-plugin-typescript
-          npm install
+      
+      - name: Build
+        working-directory: ./template
+        run: |
+          yarn install
           export NODE_ENV=production
-          npm run lint
-          npm run build
+          yarn lint
+          yarn build
 
