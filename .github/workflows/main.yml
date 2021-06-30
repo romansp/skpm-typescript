@@ -23,7 +23,7 @@ jobs:
           node-version: '14'
       
       - name: Build
-        working_directory: ./template
+        working-directory: ./template
         run: |
           npm run install
           npm run lint
