@@ -13,19 +13,18 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      NODE_ENV: production
     
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          # choose node.js version to use
           node-version: '14'
       
       - name: Build
         working-directory: ./template
         run: |
           yarn install
-          export NODE_ENV=production
           yarn lint
-          yarn build
 
