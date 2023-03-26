@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: 'lts'
 
       - run: mkdir -p "~/Library/Application Support/com.bohemiancoding.sketch3"
       - run: mkdir -p "~/Library/Application Support/com.bohemiancoding.sketch3/Plugins"
