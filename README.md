@@ -2,6 +2,8 @@
 
 [![CI](https://github.com/romansp/skpm-typescript/actions/workflows/main.yml/badge.svg)](https://github.com/romansp/skpm-typescript/actions/workflows/main.yml)
 
+⚠️ Currently broken due to: https://github.com/skpm/skpm/issues/304
+
 ## Documentation
 
 - This is a template for [skpm](https://github.com/skpm/skpm) with [TypeScript](https://github.com/Microsoft/TypeScript) and [ESLint](https://github.com/eslint/eslint) support.
