@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@skpm/builder": "<1",
-    "@typescript-eslint/eslint-plugin": "^5.2.0",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
     "@typescript-eslint/parser": "^5.2.0",
     "eslint": "^8.1.0",
     "terser-webpack-plugin": "^4.2.3",
